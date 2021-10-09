@@ -1,0 +1,80 @@
+* {
+    margin: 0px;
+    padding: 0px; 
+}
+
+body {
+    background-image: url(bg.jpeg);
+    background-size: cover;
+}
+
+nav {
+    width: 100%;
+    height: 64px;
+    background-color: silver;
+}
+
+nav p {                                 /* this is the tag around the site name */
+    font-family: Esteban, serif;
+    color: #222;
+    font-size: 20px;
+    line-height: 50px;
+    float:left;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 280px;
+}
+
+nav ul {                             /* this is the tag around the whole menu */
+    float: left;
+    
+}
+
+nav ul li {                          /* this is the tag around the main menu items (resume, etc.) */
+    float: left;
+    width: 180px;
+    list-style: none;
+    position:relative; 
+    padding-top: 0px;
+}
+
+nav ul li a {                        /* this is the tag for the links around the main menu items */
+    display: block;
+    font-family: Raleway, sans-serif;
+    background-color: transparent;
+    color: #222;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 24px 14px;
+}
+
+nav ul li a:hover {                  /* this is the hover effect for main menu items */
+    display: block;
+    background-color: grey;
+}
+
+nav ul li ul {                       /* this is the tag for the list of sub-menu items */
+    display: none;
+    position: absolute; 
+    background-color: silver;
+    border-radius: 0px 0px 5px 5px;
+}
+
+nav ul li:hover ul {                       /* this is the tag for the list of sub-menu items */
+    display: block;
+}
+
+
+nav ul li ul li {                   /* this is the tag for the sub-menu items */
+    position: relative;
+}
+
+nav ul li ul li a {                   /* this is the tag for the links around the sub-meny items */
+    padding: 8px 14px;
+}
+
+nav ul li ul li a:hover {           /* this is the hover effect for sub-menu items */
+    display: block;
+    background-color: grey;
+    padding: 8px 14px;
+}
