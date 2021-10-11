@@ -1,4 +1,15 @@
 <!DOCTYPE html>
+ <!--SSquillace Personal Website v_2
+Created Oct 9 2021
+
+TOC
+
+1. Navigation Bar 
+2. 
+
+
+
+-->
 <html>
     <head>
         <meta charset="UTF-8">
@@ -8,6 +19,86 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        
+
+        <div class="container">
+            
+            <div class="hero"><p class="logo" id="logo" >|samsquillace.com|</p></div>
+            
+            <div id="navbar" class="navbar">
+            <section>
+                <a href="#">Resume</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Contact</a>
+            </section>
+            </div>
+                        
+            <div id="aboutme" class="main">
+                    This is test text. This is test text. This is test text. This is test text. 
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. Is this test text? This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                    This is test text. This is test text. This is test text. This is test text.
+                
+            </div>
+            
+            <div class="footer"><section>&copy Sam Squillace 2021 All rights reserved</section></div>
+          </div>
+
+        <script>
+            // When the user scrolls the page, execute myFunction
+            window.onscroll = function() {
+                myFunction(); 
+                afunction();}
+            
+            // Get the navbar
+            var navbar = document.getElementById("navbar");
+            var logo = document.getElementById("logo");
+
+            // Get the offset position of the navbar
+            var sticky = navbar.offsetTop;
+           
+            var sticky2 = logo.offsetTop; 
+
+            // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            function myFunction() {
+            if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+            } else {
+            navbar.classList.remove("sticky");
+            }
+            }
+
+            function afunction() {
+            if (window.pageYOffset >= sticky2) {
+            logo.classList.add("sticky2")
+            } else {
+            logo.classList.remove("sticky2")
+            }
+            } 
+        </script>
+
+    </body>
+    </html>
+
+
+
+    <!--1. Navigation Bar - OLD V_2
     <nav>
         <p>|samsquillace.com|</p>
         <ul>
@@ -35,6 +126,19 @@
             </ul
             ></li>
         </ul>
+            <script>
+            window.onscroll = function() {afunction()};
+
+            var logo = document.getElementById("logo");
+            var sticky2 = logo.offsetTop; 
+
+           function afunction() {
+            if (window.pageYOffset >= sticky2) {
+            logo.classList.add("sticky2")
+            } else {
+            logo.classList.remove("sticky2")
+            }
+            } 
+        </script>
     </nav>
-    </body>
-</html>
+-->

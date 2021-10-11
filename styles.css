@@ -1,80 +1,154 @@
-* {
-    margin: 0px;
-    padding: 0px; 
+/* V_3 */
+
+/* main elements */
+
+html {
+    font-size: 62.5%; 
 }
 
-body {
-    background-image: url(bg.jpeg);
-    background-size: cover;
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-nav {
-    width: 100%;
-    height: 64px;
-    background-color: silver;
-}
-
-nav p {                                 /* this is the tag around the site name */
-    font-family: Esteban, serif;
-    color: #222;
-    font-size: 20px;
-    line-height: 50px;
-    float:left;
-    padding: 10px;
-    padding-left: 30px;
-    padding-right: 280px;
-}
-
-nav ul {                             /* this is the tag around the whole menu */
-    float: left;
-    
-}
-
-nav ul li {                          /* this is the tag around the main menu items (resume, etc.) */
-    float: left;
-    width: 180px;
-    list-style: none;
-    position:relative; 
-    padding-top: 0px;
-}
-
-nav ul li a {                        /* this is the tag for the links around the main menu items */
-    display: block;
-    font-family: Raleway, sans-serif;
-    background-color: transparent;
-    color: #222;
-    font-size: 14px;
-    text-decoration: none;
-    padding: 24px 14px;
-}
-
-nav ul li a:hover {                  /* this is the hover effect for main menu items */
-    display: block;
-    background-color: grey;
-}
-
-nav ul li ul {                       /* this is the tag for the list of sub-menu items */
-    display: none;
-    position: absolute; 
-    background-color: silver;
-    border-radius: 0px 0px 5px 5px;
-}
-
-nav ul li:hover ul {                       /* this is the tag for the list of sub-menu items */
-    display: block;
-}
-
-
-nav ul li ul li {                   /* this is the tag for the sub-menu items */
+p {
     position: relative;
+    top: 0;
 }
 
-nav ul li ul li a {                   /* this is the tag for the links around the sub-meny items */
-    padding: 8px 14px;
+.hero  {
+    background-image: url(bg2.jpeg);
+    background-size: cover;
+    grid-area: hero; 
+    height: 450px;
+    align-items: center;
 }
 
-nav ul li ul li a:hover {           /* this is the hover effect for sub-menu items */
-    display: block;
-    background-color: grey;
-    padding: 8px 14px;
+.navbar {
+    display: grid;
+    grid-area:nav;
+    background: #d3d3d3;
+    height: 100px;
 }
+
+
+.main  {
+    background: #silver;
+    grid-area: main;
+}
+
+
+.footer {
+background: silver;
+grid-area: footer;
+font-family: Esteban, serif;
+font-style: bold;
+font-size: 2em; 
+}
+
+.container {
+  min-height: 300px;
+  width: 100%;
+  background: LightGray;
+  padding: 0px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.1fr 3fr 0.1fr;
+  grid-gap: 0px;
+  grid-template-areas:
+    "hero hero hero"
+    "nav nav nav"
+    "main main main"
+    "footer footer footer";
+}
+
+
+
+/* Classes */
+
+#aboutme {
+    font-family: Esteban, serif;
+    font-style: italic;
+    font-size: 2em; 
+}
+
+/* IDs */
+
+    .logo {
+        font-size: 4em;
+        animation: color-change 20s infinite;
+        font-family: Esteban, serif;
+        font-style: bold;
+        z-index: 1;
+    }
+
+/* Nav-bar work based on W3Schools method */
+
+/* Style the navbar */
+#navbar {
+    overflow: hidden;
+    background-color: silver;
+    height: 100px;
+  }
+  
+#logo {
+    display: flex;
+    overflow: hidden; 
+    background-color: transparent;
+    height: 50px;
+    padding: 12px 0px;
+    margin: 0px;
+}
+
+  /* Navbar links */
+  #navbar a {    
+    color: #333;
+    font-size: 2.5em;
+    font-family: Raleway, sans-serif;
+    text-decoration: none;
+    padding: 10px 80px;
+  }
+  
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+  
+  .content2 {
+    padding: 18px;
+  }
+
+
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 99%;
+  }
+  
+  .sticky2 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+  .sticky2 + .content2 {
+    padding-top: 60;
+  }
+
+  @keyframes color-change {
+    0%  { color: gold;} 
+    15% { color: gold; }
+    30% { color: goldenrod; }
+    45% { color: goldenrod; }
+    60% { color: goldenrod; }
+    75% { color: gold; }
+    100% { color: gold;} 
+    }
